@@ -15,4 +15,10 @@ class Profiles extends Model
         'introduction' =>  'required',
 
     );
+
+    public function histories()
+    {
+        return $this->hasMany('App\ProfileHistory','foreign_key','profile_id');
+
+    }
 }
